@@ -25,4 +25,14 @@ public class PessoaService {
   public Pessoa criar(Pessoa pessoa) {
     return pessoaRepository.save(pessoa);
   }
+
+  public Pessoa consultar(Long id) {
+    return buscarOuFalhar(id);
+  }
+
+
+
+  private Pessoa buscarOuFalhar(Long id) {
+    return pessoaRepository.findById(id).orElseThrow(() -> new PessoaNaoEncontradaException(id));
+  }
 }
