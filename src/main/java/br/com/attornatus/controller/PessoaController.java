@@ -29,6 +29,12 @@ public class PessoaController {
     return pessoaService.listar();
   }
 
+
+  @GetMapping("/{id}")
+  public Pessoa consultar(@PathVariable Long id) {
+    return pessoaService.consultar(id);
+  }
+
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
   public Pessoa criar(@RequestBody @Valid Pessoa pessoa) {
