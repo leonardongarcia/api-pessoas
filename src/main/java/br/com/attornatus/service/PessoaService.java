@@ -30,7 +30,11 @@ public class PessoaService {
     return buscarOuFalhar(id);
   }
 
-
+  public Pessoa editar(Long id, PessoaModel model) {
+    Pessoa pessoaAAatualizar = buscarOuFalhar(id);
+    Pessoa pessoaASalvar = pessoaMapper.toEntity(pessoaAAatualizar, model);
+    return pessoaRepository.save(pessoaASalvar);
+  }
 
   private Pessoa buscarOuFalhar(Long id) {
     return pessoaRepository.findById(id).orElseThrow(() -> new PessoaNaoEncontradaException(id));

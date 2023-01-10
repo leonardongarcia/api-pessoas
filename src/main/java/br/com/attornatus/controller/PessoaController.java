@@ -40,4 +40,9 @@ public class PessoaController {
   public Pessoa criar(@RequestBody @Valid Pessoa pessoa) {
     return pessoaService.criar(pessoa);
   }
+
+  @PutMapping("/{id}")
+  public Pessoa editar(@PathVariable Long id, @RequestBody @Valid PessoaModel model) {
+    return pessoaService.editar(id, model);
+  }
 }
