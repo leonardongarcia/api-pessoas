@@ -1,4 +1,4 @@
-package br.com.attornatus.exception;
+package br.com.attornatus.domain.exception;
 
 public class PessoaNaoEncontradaException extends RuntimeException {
   public PessoaNaoEncontradaException(Long id) {
