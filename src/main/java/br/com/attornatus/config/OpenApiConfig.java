@@ -39,7 +39,7 @@ public class OpenApiConfig {
                 .title("Api de pessoas")
                 .description("Api para gerenciamento de pessoas.")
                 .version("V1")
-                .license(new License().name("MIT License").url("https:ADICIONAR LICENSA")))
+                .license(new License().name("MIT License").url("https://github.com/leonardongarcia/api-pessoas/blob/master/LICENSE")))
         .externalDocs(
             new ExternalDocumentation()
                 .description("Attornatus Procuradoria Digital")
